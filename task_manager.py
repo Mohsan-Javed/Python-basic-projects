@@ -1,3 +1,5 @@
+import os
+
 def view_tasks(tasks):
     if not tasks:
         print("\nYour task list is empty.")
@@ -25,8 +27,6 @@ def delete_task(tasks):
             print("Invalid task number.")
     except ValueError:
         print("Please enter a valid number.")
-
-import os
 
 def save_tasks(tasks, filename="tasks.txt"):
     with open(filename, "w") as file:
